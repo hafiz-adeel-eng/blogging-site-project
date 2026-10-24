@@ -8,5 +8,34 @@
   "xml_text_parity": true,
   "article_dates_preserved": true,
   "cloudflare_deployment": "https://0df01054.dailyvertex.pages.dev",
-  "gsc_submission": "Not performed: authenticated Search Console access unavailable"
+  "gsc_submission": "Not performed: authenticated Search Console access unavailable",
+  "live_http_checks": {
+    "/sitemap.xml": {
+      "status": 200,
+      "content_type": "application/xml",
+      "final_url": "https://dailyvertex.pages.dev/sitemap.xml",
+      "x_robots_tag": null,
+      "urls": 18
+    },
+    "/sitemap.txt": {
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "final_url": "https://dailyvertex.pages.dev/sitemap.txt",
+      "x_robots_tag": null
+    },
+    "/robots.txt": {
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "final_url": "https://dailyvertex.pages.dev/robots.txt",
+      "x_robots_tag": null
+    },
+    "/": {
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "final_url": "https://dailyvertex.pages.dev/",
+      "x_robots_tag": null
+    }
+  },
+  "googlebot_user_agent_note": "These are diagnostic requests from this environment with a Googlebot User-Agent, not requests from a verified Google crawler.",
+  "client_signature_difference": "Default Python urllib User-Agent receives Cloudflare HTTP403/error1010; browser and Googlebot User-Agents return HTTP200. Real Google fetch status cannot be inferred without GSC details."
 }
