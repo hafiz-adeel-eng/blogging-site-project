@@ -1,0 +1,132 @@
+{
+  "governance": {
+    "cover": "governance.webp",
+    "thumbnail": "governance-card.webp",
+    "alt": "Business colleagues reviewing an abstract network model around a boardroom table",
+    "generated": true,
+    "width": 1200,
+    "height": 800,
+    "bytes": 97680,
+    "thumbnail_bytes": 33210
+  },
+  "operating-model": {
+    "cover": "operating-model.webp",
+    "thumbnail": "operating-model-card.webp",
+    "alt": "A hand arranging connected glass and metal structures on a blue tabletop",
+    "generated": true,
+    "width": 1200,
+    "height": 800,
+    "bytes": 75540,
+    "thumbnail_bytes": 28942
+  },
+  "risk-assessment": {
+    "cover": "risk-assessment.webp",
+    "thumbnail": "risk-assessment-card.webp",
+    "alt": "Hands examining a transparent layered cube with illuminated checkpoints",
+    "generated": true,
+    "width": 1200,
+    "height": 800,
+    "bytes": 85236,
+    "thumbnail_bytes": 31704
+  },
+  "space": {
+    "cover": "space.webp",
+    "thumbnail": "space-card.webp",
+    "alt": "A sunlit room with an arched opening, natural furniture and a blue chair",
+    "generated": true,
+    "width": 1080,
+    "height": 720,
+    "bytes": 95756,
+    "thumbnail_bytes": 34166
+  },
+  "travel": {
+    "cover": "travel.webp",
+    "thumbnail": "travel-card.webp",
+    "alt": "An alpine lake, a winding walking path and a distant mountain village",
+    "generated": true,
+    "width": 972,
+    "height": 648,
+    "bytes": 96960,
+    "thumbnail_bytes": 34866
+  },
+  "business": {
+    "cover": "business.webp",
+    "thumbnail": "business-card.webp",
+    "alt": "A notebook, calculator, blue tray and coins arranged on a light wooden desk",
+    "generated": true,
+    "width": 1200,
+    "height": 800,
+    "bytes": 77528,
+    "thumbnail_bytes": 29246
+  },
+  "wellness": {
+    "cover": "wellness.webp",
+    "thumbnail": "wellness-card.webp",
+    "alt": "A quiet garden bench beside a shaded path with a blue notebook",
+    "generated": true,
+    "width": 786,
+    "height": 524,
+    "bytes": 90450,
+    "thumbnail_bytes": 30938
+  },
+  "data": {
+    "cover": "data.webp",
+    "thumbnail": "data-card.webp",
+    "alt": "Irregular translucent pieces becoming a precisely ordered grid of glass cubes",
+    "generated": true,
+    "width": 1200,
+    "height": 800,
+    "bytes": 98930,
+    "thumbnail_bytes": 32582
+  },
+  "brand-data": {
+    "cover": "brand-data.webp",
+    "thumbnail": "brand-data-card.webp",
+    "alt": "Luminous blue and teal identity paths converging into one glass prism",
+    "generated": true,
+    "width": 1200,
+    "height": 800,
+    "bytes": 90834,
+    "thumbnail_bytes": 33720
+  },
+  "ai": {
+    "cover": "ai.webp",
+    "thumbnail": "ai-card.webp",
+    "alt": "A robotic hand reaching toward a glowing orb in a calm architectural space",
+    "generated": true,
+    "width": 1672,
+    "height": 941,
+    "bytes": 74618,
+    "thumbnail_bytes": 14748
+  },
+  "hammer": {
+    "cover": "hammer.webp",
+    "thumbnail": "hammer-card.webp",
+    "alt": "A navy laptop showing conceptual AI chat bubbles and a luminous model cube beside a teal notebook",
+    "generated": true,
+    "width": 1200,
+    "height": 800,
+    "bytes": 93536,
+    "thumbnail_bytes": 30968
+  },
+  "water-flosser": {
+    "cover": "water-flosser.webp",
+    "thumbnail": "water-flosser-card.webp",
+    "alt": "Conceptual white cordless water flosser with a pale-blue reservoir on a bathroom counter; not the actual CVS product",
+    "generated": true,
+    "width": 1200,
+    "height": 800,
+    "bytes": 47052,
+    "thumbnail_bytes": 18672
+  },
+  "networking": {
+    "cover": "networking.webp",
+    "thumbnail": "networking-card.webp",
+    "alt": "AI-generated illustration of professionals talking in small groups at a bright networking reception",
+    "generated": true,
+    "width": 1200,
+    "height": 800,
+    "bytes": 99074,
+    "thumbnail_bytes": 34370
+  }
+}

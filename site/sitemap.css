@@ -1,0 +1,46 @@
+@namespace s url("http://www.sitemaps.org/schemas/sitemap/0.9");
+
+s|urlset {
+  display: block;
+  box-sizing: border-box;
+  min-height: 100vh;
+  margin: 0;
+  padding: 48px max(24px, calc((100vw - 1080px) / 2));
+  background: #f3f8ff;
+  color: #203147;
+  font: 15px/1.65 system-ui, sans-serif;
+}
+s|urlset::before {
+  content: "DailyVertex sitemap";
+  display: block;
+  margin: 0 0 28px;
+  color: #1465db;
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 750;
+  letter-spacing: -1.2px;
+}
+s|url {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px 24px;
+  margin-bottom: 10px;
+  padding: 18px 22px;
+  border: 1px solid #dce7f4;
+  border-radius: 14px;
+  background: #fff;
+}
+s|loc { display: block; overflow-wrap: anywhere; }
+s|lastmod { display: block; color: #52667d; font-size: 12px; }
+s|lastmod::before { content: "Updated: "; }
+s|urlset::after {
+  content: "For a clickable directory, open dailyvertex.pages.dev/sitemap";
+  display: block;
+  margin-top: 24px;
+  color: #52667d;
+  font-size: 13px;
+}
+@media (max-width: 600px) {
+  s|urlset { padding: 28px 16px; }
+  s|url { grid-template-columns: minmax(0, 1fr); padding: 16px; }
+}

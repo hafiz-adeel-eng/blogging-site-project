@@ -1,0 +1,10 @@
+{
+  "standalone_before_bytes": 834861,
+  "standalone_after_bytes": 330501,
+  "standalone_reduction_percent": 60.4,
+  "standalone_gzip_estimate_bytes": 174425,
+  "font_before_bytes": 275584,
+  "font_after_bytes": 58532,
+  "production_file_bytes": 478705,
+  "upload_zip_bytes": 330874
+}

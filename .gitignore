@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+dist/
+.wrangler/
+
+# Local credentials and dependencies
+.env
+.env.*
+!.env.example
+node_modules/

@@ -1,0 +1,17 @@
+(()=>{
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const read=(k,f)=>{try{const v=localStorage.getItem(k);return v===null?f:JSON.parse(v)}catch{return f}};
+let saved=read('dv-saved',[]);if(!Array.isArray(saved))saved=[];
+const toast=t=>{const el=$('#toast');el.textContent=t;el.classList.add('visible');clearTimeout(window.dvTimer);window.dvTimer=setTimeout(()=>el.classList.remove('visible'),2600)};
+const write=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));return true}catch{toast('Browser storage unavailable. Changes last for this visit.');return false}};
+const theme=read('dv-theme',null);document.body.classList.toggle('dark',theme==='dark'||(!theme&&matchMedia('(prefers-color-scheme: dark)').matches));
+const themeButton=$('#theme');const syncTheme=()=>{themeButton.setAttribute('aria-label',document.body.classList.contains('dark')?'Use light theme':'Use dark theme');themeButton.textContent=document.body.classList.contains('dark')?'☀':'◐'};syncTheme();
+themeButton.addEventListener('click',()=>{document.body.classList.toggle('dark');write('dv-theme',document.body.classList.contains('dark')?'dark':'light');syncTheme()});
+const params=new URLSearchParams(location.search);let category=params.has('saved')?'saved':params.get('category')||'All stories';
+const render=()=>{$$('.saved-count').forEach(x=>x.textContent=saved.length);$$('[data-save]').forEach(b=>{const on=saved.includes(b.dataset.save);b.setAttribute('aria-pressed',String(on));b.textContent=b.classList.contains('inline')?(on?'♥ Saved':'♡ Save'):(on?'♥':'♡')});if(!$('#search'))return;let count=0;const q=$('#search').value.toLowerCase().trim();$$('.story').forEach(c=>{const visible=(category==='All stories'||category==='saved'&&saved.includes(c.dataset.slug)||c.dataset.category===category)&&c.dataset.search.includes(q);c.hidden=!visible;if(visible)count++});$$('[data-filter]').forEach(b=>{const on=b.dataset.filter===category;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on))});$('#empty').hidden=count>0;$('#results').textContent=`${count} ${count===1?'story':'stories'} found`};
+$$('[data-save]').forEach(b=>b.addEventListener('click',()=>{const id=b.dataset.save;const on=saved.includes(id);saved=on?saved.filter(x=>x!==id):[...saved,id];write('dv-saved',saved);render();toast(on?'Removed from your reading list':'Saved to your reading list')}));
+$$('[data-filter]').forEach(b=>b.addEventListener('click',()=>{category=b.dataset.filter;render()}));$('#search')?.addEventListener('input',render);$('#reset')?.addEventListener('click',()=>{category='All stories';$('#search').value='';render()});
+$('.share')?.addEventListener('click',async()=>{try{if(navigator.share)await navigator.share({title:document.title,url:location.href});else{await navigator.clipboard.writeText(location.href);toast('Article link copied')}}catch(e){if(e.name!=='AbortError')toast('Please copy the article address from your browser.')}});
+$('#clear-data')?.addEventListener('click',()=>{try{localStorage.removeItem('dv-saved');localStorage.removeItem('dv-theme');saved=[];document.body.classList.remove('dark');render();syncTheme();toast('Saved articles and theme cleared')}catch{toast('Browser storage is unavailable')}});
+let ticking=false;addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(()=>{const range=document.documentElement.scrollHeight-innerHeight;$('#progress').style.width=(range>0?scrollY/range*100:0)+'%';ticking=false});ticking=true}},{passive:true});render();
+})();
